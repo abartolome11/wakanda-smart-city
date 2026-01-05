@@ -5,7 +5,7 @@ Este proyecto implementa una arquitectura de microservicios en Python para la ge
 
 La solución está basada en FastAPI, Docker, Prometheus, Grafana y Jaeger, e incluye descubrimiento de servicios, balanceo de carga, resiliencia y observabilidad completa.
 
--------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------
 
 Arquitectura general
 
@@ -26,7 +26,7 @@ La arquitectura sigue un modelo de microservicios desacoplados, compuesta por:
 
 Cada microservicio se registra automáticamente en el registry al arrancar.
 
--------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------
 
 Endpoints principales
 
@@ -42,7 +42,7 @@ Endpoint            Descripción
 Ejemplo:
     curl http://localhost:8080/traffic/status
 
--------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------
 
 Construir y lanzar contenedores
     
@@ -53,7 +53,7 @@ docker compose up
 Alternativamente, para replicación de un microservicio:
 docker compose up --scale <microservicio>=2
 
--------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------
 
 Balanceo entre réplicas
 
@@ -77,7 +77,7 @@ Devolverá
 
 Demostrando así que existe balanceo entre réplicas.
 
--------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------
 
 Fallo de un servicio
 
@@ -116,7 +116,7 @@ Tendremos la salida:
   "message": "Service temporarily unavailable"
 }
 
--------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------
 
 Monitorización con Prometheus y Grafana
 
@@ -141,7 +141,7 @@ Credenciales por defecto:
     usuario: admin
     contraseña: admin
 
--------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------
 
 Trazabilidad distribuida con Jaeger
 
@@ -156,7 +156,7 @@ El proyecto utiliza OpenTelemetry para generar trazas distribuidas.
 Acceso a Jaeger:
     http://localhost:16686
 
--------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------
 
 Test
 
@@ -164,4 +164,3 @@ Ejecutar con pytest
 Para que funcione se necesita instalar las dependencias en local:
 Comando: pip install fastapi pytest httpx prometheus_client requests tenacity opentelemetry-api opentelemetry-sdk opentelemetry-exporter-otlp opentelemetry-instrumentation-fastapi
 
--------------------------------------------------------------------------------------------------------------------
