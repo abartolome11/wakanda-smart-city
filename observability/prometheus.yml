@@ -1,0 +1,12 @@
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: "wakanda-services"
+    static_configs:
+      - targets:
+          - traffic:8000
+          - energy:8000
+          - water:8000
+          - waste:8000
+          - security:8000

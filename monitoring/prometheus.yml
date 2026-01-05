@@ -1,0 +1,23 @@
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: "traffic"
+    static_configs:
+      - targets: ["traffic:8000"]
+
+  - job_name: "energy"
+    static_configs:
+      - targets: ["energy:8000"]
+
+  - job_name: "water"
+    static_configs:
+      - targets: ["water:8000"]
+
+  - job_name: "waste"
+    static_configs:
+      - targets: ["waste:8000"]
+
+  - job_name: "security"
+    static_configs:
+      - targets: ["security:8000"]
